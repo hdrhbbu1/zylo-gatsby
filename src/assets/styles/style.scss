@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
+
+body {
+  min-height: 100vh;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b0055+0,9b0077+100 */
+  background: #0b0055; /* Old browsers */
+  background: -moz-linear-gradient(top,  #0b0055 0%, #9b0077 100%);
+  background: -webkit-linear-gradient(top,  #0b0055 0%,#9b0077 100%);
+  background: linear-gradient(to bottom,  #0b0055 0%,#9b0077 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0055', endColorstr='#9b0077',GradientType=0 );
+}
+
+body,
+a,
+p,
+ul,
+h1, h2, h3, h4, h5, h6 {
+  color: #dae1ea;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+
+/*
+  Navbar
+*/
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 960;
+  padding: 1.45rem 4rem;// 1.0875rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.4s all;
+    border-bottom: 1px solid transparent;
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      opacity: 1;
+      // border-bottom-color: var(--colorNeutralLight);
+    }
+
+    .logo {
+      width: 90px;
+      height: auto;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .github-icon {
+    fill: currentColor;
+    opacity: 0.5;
+    margin-bottom: 0;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/*
+  site Layout
+*/
+.content {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+}
+
+
+
+/*
+  Contact form styles
+*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  textarea,
+  select {
+    font-size: 19px;
+    height: 80px;
+    margin-bottom: 40px;
+    background: rgba(0,0,0,.3);
+    border: 3px solid var(--colorNeutral);
+    color: var(--colorNeutralLight);
+    padding: 1rem;
+  }
+
+  input[type="submit"] {
+    /*border-color: var(--colorSecondaryDark);
+    background: var(--colorSecondary);*/
+    padding: 0 1rem;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s all;
+    color: var(--colorSecondary);
+    border: 3px solid var(--colorSecondary);
+    background: color(var(--colorNeutralLight) a(0.2));
+  }
+
+  input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}
+
+
+
+/*
+  About Page Icons
+*/
+.about-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-icons a {
+  width: 20%;
+  margin: 0 2.5% 20px;
+  text-align: center;
+}
+
+.about-icons span {color: #fff;}
+
+.about-icons img.white-bkgd {
+  background-color: #fff;
+  padding: 1em;
+}
+
+
+
+/*
+  FlexGrid
+*/
+.row { display: flex; }
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 5%;
+}
+
+@media (max-width: 767px) {
+  .row { flex-direction: column; }
+  .col {
+    width: 96%;
+    margin: 0 2%;
+  }
+}
