@@ -1,0 +1,2 @@
+webpackJsonp([0x58efa73a6c01fc00],{"./node_modules/json-loader/index.js!./.cache/json/projects.json":function(e,t){e.exports={data:{allMarkdownRemark:{edges:[{node:{excerpt:"Test",frontmatter:{path:"/test",title:"test",date:"02 February, 2017"}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---projects-87baa83a929af36246bb.js.map
