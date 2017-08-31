@@ -25,7 +25,10 @@ import RaspberryPilogo from '../assets/images/about-icons/raspberry-pi-logo.png'
 
 const AboutPage = () => (
   <div>
-    {/* <h1>Making neat things with since 2014.</h1> */}
+    <h1>About</h1>
+
+    <Link className="btn" to="/projects/">See projects</Link>
+
     <div className="row">
       <div className="col">
         <h3>What I can do for you</h3>
@@ -129,7 +132,7 @@ const AboutPage = () => (
         <span>Premiere Pro</span>
       </a>
       <a href="https://affinity.serif.com/en-us/designer/" target="_blank" title="Affinity Designer">
-        <img src="../assets/images/about-icons/affinity-designer.png" alt={AffinityDesignerlogo} />
+        <img src={AffinityDesignerlogo} alt="Affinity Designer" />
         <span>Affinity Designer</span>
       </a>
       <a href="https://affinity.serif.com/en-us/photo/" target="_blank" title="Affinity Photo">
@@ -141,7 +144,7 @@ const AboutPage = () => (
         <span>Raspberry Pi</span>
       </a>
     </div>
-
+    {/* end about icons */}
 
   </div>
 )

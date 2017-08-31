@@ -9,9 +9,12 @@ const ProjectsPage = ({data}) => {
       <h1>Projects</h1>
       {
         posts.map((post, i) => (
-          <div key={i}>
-            <h3>{post.node.frontmatter.title}</h3>
-            { post.node.excerpt }
+          <div className="post-preview" key={i}>
+            <Link to={post.node.frontmatter.path}>
+              <h3>{post.node.frontmatter.title}</h3>
+            </Link>
+            <p>{ post.node.excerpt }</p>
+            <Link className="btn" to={post.node.frontmatter.path}>View</Link>
           </div>
         ))
       }
@@ -23,21 +26,14 @@ export default ProjectsPage
 
 export const ProjectsQuery = graphql`
   query ProjectsQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark {
       edges {
         node {
           excerpt
           frontmatter {
             path
-            date(formatString: "DD MMMM, YYYY")
-          }
-          frontmatter {
             title
+            date(formatString: "DD MMMM, YYYY")
           }
         }
       }
