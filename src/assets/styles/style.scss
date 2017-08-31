@@ -4,8 +4,8 @@
 $green: #46BE77;
 
 @mixin background-opacity($color, $opacity: 0.3) {
-    background: $color; /* The Fallback */
-    background: rgba($color, $opacity);
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
 }
 
 body {
@@ -89,24 +89,6 @@ p {
     }
   }
 
-  .mobile-collapse {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-
-  .hamburger {
-    display: none;
-    width: 36px;
-    height: auto;
-    z-index: 500;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   .github-icon {
     fill: currentColor;
     opacity: 0.5;
@@ -116,6 +98,24 @@ p {
   }
 }
 
+
+.mobile-collapse {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  width: 36px;
+  height: auto;
+  z-index: 500;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 
 /*

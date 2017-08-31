@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Zylo - Web Development`,
   },
-  pathPrefix: `https://github.com/8ctopotamus/zylo-gatsby`,
+  pathPrefix: `/zylo-gatsby`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

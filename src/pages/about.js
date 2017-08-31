@@ -28,6 +28,7 @@ const AboutPage = () => (
     <h1>About</h1>
 
     <Link className="btn" to="/projects/">See projects</Link>
+    <Link className="btn" to="/contact/">Contact</Link>
 
     <div className="row">
       <div className="col">
@@ -47,7 +48,7 @@ const AboutPage = () => (
         </ul>
       </div>
       <div className="col">
-        <h3>References</h3>
+        <h3>Who I've worked with</h3>
         <ul>
           <li>In-house Computer Services (ICS)</li>
           <li>RealWealth</li>

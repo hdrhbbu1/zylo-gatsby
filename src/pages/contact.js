@@ -17,7 +17,8 @@ const ContactPage = () => (
         <option value="consultation">Consultation</option>
         <option value="hi">Just saying "hi"</option>
       </select>
-    	<textarea name="message" placeholder="Message"></textarea>
+      <label htmlFor="interest">Tell me what's up *</label>
+    	<textarea name="message" placeholder="Message" required></textarea>
       <input type="hidden" name="_subject" value="Zylo site submission!" />
       <input type="hidden" name="_next" value="//site.io/thanks.html" />
     	<input type="text" name="_gotcha" style={{display:'none'}} />

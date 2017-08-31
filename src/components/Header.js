@@ -36,10 +36,11 @@ class Header extends React.Component {
           <Link to="/contact/" onClick={this.toggleMenu}>
             Contact
           </Link>
-          <a href="https://github.com/8ctopotamus" target="_blank" title="Zylo Github">
-            <img src={GithubIcon} alt="Github icon" className="github-icon" />
-          </a>
         </div>
+
+        <a href="https://github.com/8ctopotamus" target="_blank" title="Zylo Github">
+          <img src={GithubIcon} alt="Github icon" className="github-icon" />
+        </a>
 
         <div onClick={this.toggleMenu}>
           <Hamburger />
