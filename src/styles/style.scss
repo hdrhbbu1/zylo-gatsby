@@ -46,8 +46,13 @@ p {
 
 .btn {
   padding: 0.5em 1.2em;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   text-decoration: none;
+}
+
+.btn-green {
+  border-color: $green;
+  color: $green;
 }
 
 
@@ -70,7 +75,8 @@ p {
     transition: 0.4s all;
     border-bottom: 1px solid transparent;
     font-weight: bold;
-    font-size: 1.8em;
+    // font-size: 1.8em;
+    font-size: 1.4em;
     text-transform: uppercase;
 
     &:hover,
@@ -88,22 +94,26 @@ p {
       }
     }
   }
-
-  .github-icon {
-    fill: currentColor;
-    opacity: 0.5;
-    margin-bottom: 0;
-    height: 40px;
-    width: 40px;
-  }
 }
 
 
 .mobile-collapse {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
+
+  a {
+    margin-left: 5%;
+  }
+}
+
+.github-icon {
+  fill: currentColor;
+  opacity: 0.5;
+  margin-bottom: 0;
+  height: 40px;
+  width: 40px;
 }
 
 .hamburger {
@@ -216,13 +226,28 @@ p {
   p { font-size: 2em; }
 }
 
+/*
+  PostPreview
+*/
 .post-preview {
   margin-bottom: 50px;
 }
+ul.post-preview_tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+  list-style: none;
+
+  li {
+    border: 1px solid white;
+    padding: 4px 6px;
+    margin-right: 12px;
+    font-size: .8em;
+  }
+}
 
 
-@media (max-width: 767px) {
-  .hamburger { display: block; }
+@media (max-width: 50em) {
   .mobile-collapse {
     display: none;
     flex-direction: column;
@@ -237,10 +262,13 @@ p {
     height: 100%;
     padding-top: 60px;
     @include background-opacity(darken($green, 25%), 0.9);
+
+    a { margin: 0; }
   }
   .mobile-collapse.open {
     display: flex;
   }
+  .hamburger { display: block; }
 
   .row { flex-direction: column; }
   .col {

@@ -4,8 +4,8 @@ module.exports = {
   },
   pathPrefix: `/zylo-gatsby`,
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,5 +26,6 @@ module.exports = {
         ]
       }
     },
+    "gatsby-plugin-offline"
   ],
 }

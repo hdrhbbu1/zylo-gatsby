@@ -4,8 +4,8 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
 
-import '../assets/styles/reset.scss'
-import '../assets/styles/style.scss'
+import '../styles/reset.scss'
+import '../styles/style.scss'
 
 const TemplateWrapper = ({children}) => (
     <div>

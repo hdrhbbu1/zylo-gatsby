@@ -7,7 +7,7 @@ const IndexPage = () => (
       Web Development
     </h1>
     <Link to="/contact/" style={{textDecoration: 'none'}}>
-      <p>Let's build something cool. 🤖</p>
+      <p>Let's build something cool. 🤖😃</p>
     </Link>
   </div>
 )
