@@ -2,6 +2,7 @@
 title: 'Santiago Times Illustrations'
 path: '/santiago-times'
 date: '2017-04-20'
+tags: [illustration, graphic design]
 ---
 
 Back in 2011 I did an internship as an illustrator at the Santiago Times, which is an English-language news source in, you guessed it, Santiago, Chile.

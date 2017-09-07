@@ -8,7 +8,7 @@ const ProjectsPage = ({data}) => {
     if (tags) {
       return <ul className="post-preview_tags">
         {
-          tags.map(tag => <li>{tag}</li>)
+          tags.map((tag, i)=> <li key={i}>{tag}</li>)
         }
       </ul>
     }

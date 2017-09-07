@@ -2,6 +2,7 @@
 title: 'Wicked Campers'
 path: '/wicked-campers'
 date: "2013-07-21T22:40:32.169Z"
+tags: [illustration, graphic design]
 ---
 
 Ever want to road trip the world? Well you can. There's a really cool company that operates in a number of countries around the globe called <a href="http://www.wickedsouthamerica.com/" target="_blank">Wicked Campers</a>. Here are some cool pieces I made for them!

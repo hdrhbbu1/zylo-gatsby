@@ -1,6 +1,7 @@
 ---
 title: 'Random Sketches 2011'
 path: '/random-sketches-2011'
+tags: [illustration, graphic design]
 ---
 
 A number of drawings from my sketchbook.
