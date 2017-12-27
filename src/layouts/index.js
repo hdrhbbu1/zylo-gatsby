@@ -2,13 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import Header from '../components/Header'
+import NavBar from '../components/NavBar'
 
+// Los estilos
 import '../styles/reset.scss'
+import '../styles/animations.scss'
 import '../styles/style.scss'
 
 const TemplateWrapper = ({children}) => (
     <div>
+
       <Helmet
         title="Zylo | Web Development"
         meta={[
@@ -17,11 +20,12 @@ const TemplateWrapper = ({children}) => (
         ]}
       />
 
-      <Header />
+      <NavBar />
 
       <div className="content">
         { children() }
       </div>
+
     </div>
   )
 

@@ -1,6 +1,7 @@
 ---
 title: 'Wicked Campers'
 path: '/wicked-campers'
+image: design-wicked-shirt.jpg
 date: "2013-07-21T22:40:32.169Z"
 tags: [illustration, graphic design]
 ---

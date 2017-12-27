@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 const ProjectsPage = ({data}) => {
   const { edges: posts } = data.allMarkdownRemark
 
-  const renderTagsList = (tags) => {
+  const renderPostTags = (tags) => {
     if (tags) {
       return <ul className="post-preview_tags">
         {
@@ -16,20 +16,29 @@ const ProjectsPage = ({data}) => {
 
   return (
     <div>
-      <h1>Projects</h1>
+      <h1 style={{display: 'none'}}>Projects</h1>
+
       {
-        posts.map((post, i) => (
-          <div className="post-preview" key={i}>
-            <Link to={post.node.frontmatter.path}>
-              <h3>{post.node.frontmatter.title}</h3>
-            </Link>
-            {
-              renderTagsList(post.node.frontmatter.tags)
-            }
-            <p>{ post.node.excerpt }</p>
-            <Link className="btn btn-green" to={post.node.frontmatter.path}>View</Link>
-          </div>
-        ))
+        posts.map((post, i) => {
+          console.log('Post: ', post.node.frontmatter)
+
+          return (
+            <div className="post-preview" key={i}>
+              <div className="post-image" style={{backgroundImage: `url(${post.node.frontmatter.image})`}}></div>
+
+              <div className="post-details">
+                <Link to={post.node.frontmatter.path}>
+                  <h3>{post.node.frontmatter.title}</h3>
+                </Link>
+
+                { renderPostTags(post.node.frontmatter.tags) }
+
+                <p>{ post.node.excerpt }</p>
+                <Link className="btn btn-green" to={post.node.frontmatter.path}>View</Link>
+
+              </div>
+            </div>
+        )})
       }
     </div>
   )
@@ -48,6 +57,7 @@ export const ProjectsQuery = graphql`
             title
             tags
             date(formatString: "DD MMMM, YYYY")
+            image
           }
         }
       }

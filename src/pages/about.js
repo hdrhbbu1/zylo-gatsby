@@ -31,7 +31,7 @@ const AboutPage = () => (
     <Link className="btn" to="/contact/">Contact</Link>
 
     <div className="row">
-      <div className="col">
+      <div className="col-6">
         <h3>What I can do for you</h3>
         <ul>
           <li>WordPress themes</li>
@@ -45,24 +45,13 @@ const AboutPage = () => (
           <li>Animation</li>
           <li>Mobile Games</li>
           <li>Hosting</li>
+          <li>Virtual Reality</li>
+          <li>3D Games</li>
         </ul>
       </div>
-      <div className="col">
-        <h3>Who I've worked with</h3>
-        <ul>
-          <li>In-house Computer Services (ICS)</li>
-          <li>RealWealth</li>
-          <li>Rebel Green</li>
-          <li>Justine Fit</li>
-          <li>Direct Supply</li>
-          <li>Oranj</li>
-          <li>Aztalan Engineering, Inc</li>
-          <li>Newport Network Solutions, Inc</li>
-          <li>New Sky Websites</li>
-          <li>Creative Circle</li>
-          <li>LiFE of HOPE</li>
-          <li>Hope Center WI</li>
-        </ul>
+
+      <div className="col-6">
+        -- testimonials ratator --
       </div>
     </div>
 

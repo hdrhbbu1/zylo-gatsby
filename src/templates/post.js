@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 
 export default function Template({data}) {
   const { markdownRemark: post } = data
+  console.log('post', post)
   return (
     <div className="post">
       <Link
@@ -15,6 +16,7 @@ export default function Template({data}) {
           ⬅ Back
       </Link>
       <h1>{post.frontmatter.title}</h1>
+
       <div dangerouslySetInnerHTML={{__html: post.html}} />
     </div>
   )
@@ -27,6 +29,7 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
+        image
       }
     }
   }
