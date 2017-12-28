@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Me from '../images/me.jpg'
+
 // icons
 import ReactIcon from '../images/about-icons/react.png'
 import ReactNativeIcon from '../images/about-icons/react-native.png'
@@ -25,33 +27,42 @@ import RaspberryPilogo from '../images/about-icons/raspberry-pi-logo.png'
 
 const AboutPage = () => (
   <div>
-    <h1>About</h1>
+    <div className="grid grid--gutters grid--center ">
+      <div className="grid-cell">
+        <h1>Hey, I'm Josh.</h1>
+      </div>
+      <div>
+        <Link className="btn btn-green btn-block" to="/contact/">Contact</Link>
+      </div>
+    </div>
 
-    <Link className="btn" to="/projects/">See projects</Link>
-    <Link className="btn" to="/contact/">Contact</Link>
+    <div className="grid grid--gutters" style={{marginTop: 50}}>
+      <div className="grid-cell">
+        <p>I like to make creative things for the web, virtual reality, the real world, and your ears! I like programming in <span className="bg-yellow">JavaScript</span> and <span className="bg-yellow">PHP</span>.</p>
 
-    <div className="row">
-      <div className="col-6">
-        <h3>What I can do for you</h3>
+        <p>My goal in life is to make things that make people scratch their heads and say "Whaaat?".</p>
+
+        <Link className="btn btn-blue btn-block" to="/projects/">See projects</Link>
+
+        <h3 style={{marginTop: 50}}>What I can do for you</h3>
         <ul>
           <li>WordPress themes</li>
           <li>WordPress plugins</li>
           <li>Static sites</li>
-          <li>Web Apps (with progressive enhancements)</li>
-          <li>Android + iOS Apps (I use React Native)</li>
-          <li>Graphics and logos</li>
-          <li>Email design</li>
+          <li>(Progressive) web apps</li>
+          <li>React Native (Android/iOS)</li>
+          <li>Graphics</li>
+          <li>Email</li>
           <li>Video editing</li>
           <li>Animation</li>
           <li>Mobile Games</li>
-          <li>Hosting</li>
           <li>Virtual Reality</li>
           <li>3D Games</li>
+          <li>Music</li>
         </ul>
       </div>
-
-      <div className="col-6">
-        -- testimonials ratator --
+      <div className="grid-cell">
+        <img src={Me} alt="Josh" />
       </div>
     </div>
 

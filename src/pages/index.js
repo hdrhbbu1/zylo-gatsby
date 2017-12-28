@@ -4,11 +4,14 @@ import Link from 'gatsby-link'
 const IndexPage = () => (
   <div className="IndexPage">
     <h2>
-      DIGITAL SOLUTIONS
+      Digital solutions
     </h2>
-    <Link to="/contact/" style={{textDecoration: 'none'}}>
-      <p>Web, VR, IoT</p>
-      {/* <p>Let's make something cool.</p> */}
+    <p>Building cool things for the Web, VR & I.o.T.</p>
+    <Link to="/about/" className="btn btn-blue" style={{textDecoration: 'none', marginRight: 12}}>
+      What?
+    </Link>
+    <Link to="/contact/" className="btn btn-green" style={{textDecoration: 'none'}}>
+      Let's do this!
     </Link>
   </div>
 )

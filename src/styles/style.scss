@@ -13,6 +13,11 @@ $yellow: #FF8C00;
   background: rgba($color, $opacity);
 }
 
+html, body {
+  margin:0;
+  padding:0;
+}
+
 body {
   border-left: 10px solid transparent;
   border-image: linear-gradient(to top, $blue, $green 100%);
@@ -28,16 +33,14 @@ body {
   // background: linear-gradient(to bottom,  #0b0055 0%,#9b0077 100%);
   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0055', endColorstr='#9b0077',GradientType=0
   // );
-
+  background-repeat: no-repeat;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#510094+0,0b0055+100 */
   background: #510094; /* Old browsers */
-  background: -moz-linear-gradient(top, #510094 0%, #0b0055 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #510094 0%,#0b0055 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #510094 0%,#0b0055 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top right, #510094 0%, #0b0055 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top right, #510094 0%,#0b0055 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom right, #510094 0%,#0b0055 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#510094', endColorstr='#0b0055',GradientType=0 ); /* IE6-9 */
 }
-
-
 
 body,
 a,
@@ -71,11 +74,50 @@ p {
   padding: 0.5em 1.2em;
   border: 3px solid #fff;
   text-decoration: none;
+  background: rgba(251, 252, 252, 0.1);
+  text-align: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
 }
 
 .btn-green {
   border-color: $green;
   color: $green;
+}
+
+.btn-blue {
+  border-color: $blue;
+  color: $blue;
+}
+
+.btn-red {
+  border-color: $red;
+  color: $red;
+}
+
+.btn-yellow {
+  border-color: $yellow;
+  color: $yellow;
+}
+
+.btn-white {
+  border-color: $white;
+  color: $white;
+}
+
+
+/*
+  Backgrounds
+*/
+
+
+.bg-yellow {
+  padding: 0 2px;
+  background: $yellow;
+  color: $darkBlue;
 }
 
 /*
@@ -136,9 +178,10 @@ a.logo {
   }
 }
 
-.github-icon {
+.github-icon,
+.home-icon {
   fill: currentColor;
-  fill: black;
+  fill: $white;
   opacity: 0.5;
   margin-bottom: 0;
   height: 32px;
@@ -158,6 +201,7 @@ a.logo {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  z-index: 110;
 }
 
 .nav-icon span {
@@ -166,6 +210,10 @@ a.logo {
   height: 5px;
   width: 100%;
   background: $green;
+  background: -moz-linear-gradient(top left,  $green 0%, $blue 100%);
+  background: -webkit-linear-gradient(top left,  $green 0%,$blue 100%);
+  background: linear-gradient(to bottom left,  $green 0%,$blue 100%);
+
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -193,6 +241,9 @@ a.logo {
 
 .nav-icon.open span {
   background: $blue;
+  // background: -moz-linear-gradient(top left,  $blue 0%, $green 100%);
+  // background: -webkit-linear-gradient(top left,  $blue 0%, $green 100%);
+  // background: linear-gradient(to bottom left,  $blue 0%, $green 100%);
 }
 
 .nav-icon.open span:nth-child(1) {
@@ -242,30 +293,6 @@ a.logo {
       transition: transform .5s ease;
     }
   }
-
-  .effect-3 {
-    padding: 10px;
-    display: inline-block;
-    overflow: hidden;
-    &:before, &:after {
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: $green;
-    }
-    &:before {
-      bottom: 0;
-      transform:  translateX(-100%);
-    }
-    &:after {
-      top: 0;
-      transform:  translateX(100%);
-    }
-    &:hover:before, &:hover:after {
-      transform:  translateX(0);
-    }
-  }
-
 }
 
 /*
@@ -285,7 +312,7 @@ a.logo {
     margin-bottom: 40px;
     background: rgba(0,0,0,.3);
     border: 3px solid #8C8D91;
-    color: #8C8D91;
+    color: $white;
     padding: 1rem;
 
     &:focus {
@@ -353,8 +380,6 @@ a.logo {
   IndexPage
 */
 .IndexPage {
-  min-height: 100vh;
-
   h2 {
     font-size: 6rem;
     line-height: 6rem;
@@ -414,12 +439,18 @@ ul.post-preview_tags {
     width: 100%;
     height: 100%;
     padding-top: 60px;
-    @include background-opacity(darken($green, 25%), 0.9);
+    z-index: 100;
+    @include background-opacity(darken($blue, 0%), 0.98);
 
-    a { margin: 0; }
+    a {
+      font-size: 2em;
+      margin: 0;
+    }
   }
 
-  .hamburger { display: block; }
+  .nav-icon.open span {
+    background-color: $white;
+  }
 
   .row { flex-direction: column; }
   .col-6 {

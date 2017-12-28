@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Logo from '../images/zylo-eye-logo.svg'
-
+import HomeIcon from '../images/home-icon.svg'
 import Hamburger from './Hamburger'
 import GithubIcon from './github-icon.svg'
 
@@ -38,6 +38,7 @@ class NavBar extends React.Component {
 
   render() {
     const { menuToggled } = this.state
+    const isHome = window.location.pathname === '/' ? true : false
 
     return (
       <nav className="main-navigation">
@@ -49,17 +50,21 @@ class NavBar extends React.Component {
         <div style={{flexGrow: 1}}>
           <div className={`mobile-collapse ${menuToggled ? 'open': ''}`}
                onClick={this.toggleMenu}>
-            <Link to="/" onClick={this.toggleMenu}>
-              home
-            </Link>
-            <Link to="/about/" onClick={this.toggleMenu}>
+            {
+              !isHome && (
+                <Link to="/" onClick={this.toggleMenu}>
+                  <img className="home-icon" src={HomeIcon} alt="home" />
+                </Link>
+              )
+            }
+            <Link to="/about/" onClick={this.toggleMenu} activeClassName="active">
               about
             </Link>
-            <Link to="/projects/" onClick={this.toggleMenu}>
+            <Link to="/projects/" onClick={this.toggleMenu} activeClassName="active">
               projects
             </Link>
-            <Link to="/contact/" onClick={this.toggleMenu}>
-              Let's talk
+            <Link to="/contact/" onClick={this.toggleMenu} activeClassName="active">
+              let's talk
             </Link>
             <a href="https://github.com/8ctopotamus" target="_blank" title="Zylo Github">
               <img className="github-icon" src={GithubIcon} alt="Github icon" />

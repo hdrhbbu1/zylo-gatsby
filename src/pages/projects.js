@@ -24,7 +24,9 @@ const ProjectsPage = ({data}) => {
 
           return (
             <div className="post-preview" key={i}>
-              <div className="post-image" style={{backgroundImage: `url(${post.node.frontmatter.image})`}}></div>
+              <div className="post-image" style={{backgroundImage: `url(${post.node.frontmatter.image})`}}>
+                <img src={post.node.frontmatter.image} />
+              </div>
 
               <div className="post-details">
                 <Link to={post.node.frontmatter.path}>
