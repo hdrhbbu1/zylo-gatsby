@@ -3,6 +3,7 @@ title: 'Real Wealth Media - A Progressive Web App'
 path: '/real-wealth-media'
 date: '2017-04-20'
 tags: [Polymer, Progressive Web Apps, WordPress]
+featuredImage: "./realwealthmedia-polymer-jim-silbernagel.jpg"
 ---
 
 ## Polymer

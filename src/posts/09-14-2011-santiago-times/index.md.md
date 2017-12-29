@@ -3,6 +3,7 @@ title: 'Santiago Times Illustrations'
 path: '/santiago-times'
 date: '2017-04-20'
 tags: [illustration, graphic design]
+featuredImage: "./illustration-lsd.jpg"
 ---
 
 Back in 2011 I did an internship as an illustrator at the Santiago Times, which is an English-language news source in, you guessed it, Santiago, Chile.
@@ -30,7 +31,7 @@ Apparently Chileans were being caught smuggling cars into Bolivia.
 
 <img src="./images/drawing-grandma-organs.jpg" alt="Grandma organs" />
 
-<img src="./images/illustration-lsd.jpg" alt="LSD" />
+<img src="./illustration-lsd.jpg" alt="LSD" />
 For an article on the rise of LSD in Chile
 
 <img src="./images/drawing-mummified.jpg" alt="Mummified" />

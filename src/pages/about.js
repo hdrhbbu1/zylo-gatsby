@@ -38,14 +38,12 @@ const AboutPage = () => (
 
     <div className="grid grid--gutters" style={{marginTop: 50}}>
       <div className="grid-cell">
-        <p>I like to make creative things for the web, virtual reality, the real world, and your ears! I like programming in <span className="bg-yellow">JavaScript</span> and <span className="bg-yellow">PHP</span>.</p>
-
-        <p>My goal in life is to make things that make people scratch their heads and say "Whaaat?".</p>
+        <p>I like to make creative things for the web, virtual reality, the real world, and your ears! I like programming in <span className="text-blue">JavaScript</span> and <span className="text-blue">PHP</span>.</p>
 
         <Link className="btn btn-blue btn-block" to="/projects/">See projects</Link>
 
         <h3 style={{marginTop: 50}}>What I can do for you</h3>
-        <ul>
+        <ul style={{columnCount: 2}}>
           <li>WordPress themes</li>
           <li>WordPress plugins</li>
           <li>Static sites</li>
@@ -61,10 +59,12 @@ const AboutPage = () => (
           <li>Music</li>
         </ul>
       </div>
-      <div className="grid-cell">
+      <div className="grid-cell" style={{maxWidth: '33%'}}>
         <img src={Me} alt="Josh" />
       </div>
     </div>
+
+    <hr/>
 
     <h2>Technologies</h2>
     <div className="about-icons">
@@ -145,7 +145,6 @@ const AboutPage = () => (
         <span>Raspberry Pi</span>
       </a>
     </div>
-    {/* end about icons */}
 
   </div>
 )

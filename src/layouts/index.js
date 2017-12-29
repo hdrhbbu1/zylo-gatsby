@@ -5,6 +5,7 @@ import Particles from 'react-particles-js'
 import PropTypes from 'prop-types'
 import React from 'react'
 import ScrollToTop from 'react-scroll-up'
+import UpArrow from '../images/up-arrow.svg'
 
 // Los estilos
 import '../styles/reset.scss'
@@ -59,8 +60,8 @@ const TemplateWrapper = ({children}) => (
         { children() }
       </div>
 
-      <ScrollToTop showUnder={160}>
-        <span>UP</span>
+      <ScrollToTop showUnder={160} style={{bottom: 10}}>
+        <img src={UpArrow} className="up-arrow" alt="scroll up" />
       </ScrollToTop>
 
     </div>

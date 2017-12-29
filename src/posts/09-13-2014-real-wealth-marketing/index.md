@@ -3,6 +3,7 @@ title: 'Real Wealth Marketing - WordPress'
 path: '/real-wealth-marketing'
 date: '2017-01-20'
 tags: [WordPress, WordPress theme, custom theme]
+featuredImage: "./realwealthmarketing-screenshot.png"
 ---
 
 Though WordPress originally started out as a blogging platform, it has become a very popular and versatile tool for building any kind of website and even web applications! RealWealth® Marketing is a good example of really expanding WordPress’s default capabilities.

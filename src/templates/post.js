@@ -29,7 +29,13 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
-        image
+        featuredImage {
+          childImageSharp{
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

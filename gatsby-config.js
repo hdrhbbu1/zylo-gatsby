@@ -17,34 +17,37 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          "gatsby-remark-copy-linked-files",
           {
             resolve: `gatsby-remark-images`,
             options: {
               linkImagesToOriginal: true,
               maxWidth: 590,
             },
-          },
-          {
-            resolve: `gatsby-plugin-favicon`,
-            options: {
-              logo: "./src/images/favicons/favicon.svg",
-              injectHTML: true,
-              icons: {
-                android: true,
-                appleIcon: true,
-                appleStartup: true,
-                coast: false,
-                favicons: true,
-                firefox: true,
-                twitter: false,
-                yandex: false,
-                windows: false
-              }
-            }
           }
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/favicons/favicon.svg",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
+      }
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     "gatsby-plugin-offline"
   ],
 }

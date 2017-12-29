@@ -2,6 +2,7 @@
 title: 'Random Sketches 2011'
 path: '/random-sketches-2011'
 tags: [illustration, graphic design]
+featuredImage: "./drawing-darles-de-comer-buena-musica.jpg"
 ---
 
 A number of drawings from my sketchbook.
@@ -9,7 +10,7 @@ A number of drawings from my sketchbook.
 <img src="./images/drawing-bats.jpg" alt="bats" />
 <img src="./images/drawing-bufon.jpg" alt="El Bufón" />
 <img src="./images/drawing-crow.jpg" alt="Crow" />
-<img src="./images/drawing-darles-de-comer-buena-musica.jpg" alt="Darles de comer buena música" />
+<img src="./drawing-darles-de-comer-buena-musica.jpg" alt="Darles de comer buena música" />
 <img src="./images/drawing-death-samurai-kid.jpg" alt="Death &amp; Samurai Kid" />
 <img src="./images/drawing-dog-plane.jpg" alt="Pilot Dog" />
 <img src="./images/drawing-drinking-sun.jpg" alt="Drinking Sun" />

@@ -1,3 +1,4 @@
+import Img from 'gatsby-image'
 import React from 'react'
 import Link from 'gatsby-link'
 
@@ -20,13 +21,11 @@ const ProjectsPage = ({data}) => {
 
       {
         posts.map((post, i) => {
-          console.log('Post: ', post.node.frontmatter)
-
+          console.log('Post: ', post.node)
           return (
             <div className="post-preview" key={i}>
-              <div className="post-image" style={{backgroundImage: `url(${post.node.frontmatter.image})`}}>
-                <img src={post.node.frontmatter.image} />
-              </div>
+              <div className="post-image" style={{backgroundImage: `url(${post.node.frontmatter.featuredImage.childImageSharp.sizes.src})`}} />
+
 
               <div className="post-details">
                 <Link to={post.node.frontmatter.path}>
@@ -35,7 +34,7 @@ const ProjectsPage = ({data}) => {
 
                 { renderPostTags(post.node.frontmatter.tags) }
 
-                <p>{ post.node.excerpt }</p>
+                <p>{ post.node.frontmatter.excerpt }</p>
                 <Link className="btn btn-green" to={post.node.frontmatter.path}>View</Link>
 
               </div>
@@ -58,8 +57,13 @@ export const ProjectsQuery = graphql`
             path
             title
             tags
-            date(formatString: "DD MMMM, YYYY")
-            image
+            featuredImage {
+              childImageSharp{
+                sizes(maxWidth: 630) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }
