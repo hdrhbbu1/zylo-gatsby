@@ -1,0 +1,2 @@
+webpackJsonp([0xe6ac1b921d9d],{198:function(e,t,a){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=a(2),u=l(n),c=a(22),d=l(c),o=function(){return u.default.createElement("div",{className:"thankyou-page"},u.default.createElement("h1",null,"🙏 Thanks 4 your message."),u.default.createElement("p",null,"We'll be in touch!"),u.default.createElement(d.default,{to:"/",className:"btn btn-green"},"Go back home"))};t.default=o,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-thanks-js-e930b65da0bb6bb3ddd7.js.map

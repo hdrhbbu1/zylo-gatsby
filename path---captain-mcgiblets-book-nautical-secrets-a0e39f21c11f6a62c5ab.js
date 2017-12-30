@@ -1,0 +1,2 @@
+webpackJsonp([0xdd16a59546fc0000],{"./node_modules/json-loader/index.js!./.cache/json/captain-mcgiblets-book-nautical-secrets.json":function(o,e){o.exports={pathContext:{}}}});
+//# sourceMappingURL=path---captain-mcgiblets-book-nautical-secrets-a0e39f21c11f6a62c5ab.js.map
