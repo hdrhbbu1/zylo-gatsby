@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Zylo - Web Development`,
   },
-  pathPrefix: `/zylo`,
+  pathPrefix: `/zylo-gatsby`,
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
@@ -44,6 +44,14 @@ module.exports = {
           windows: false
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-111696753-1",
+        // Setting this parameter is optional
+        anonymize: true,
+      },
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",

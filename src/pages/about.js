@@ -34,42 +34,48 @@ import HTMLCSSIcon from '../images/about-icons/html-css-logos.png'
 
 const AboutPage = () => (
   <div className="about-page">
-    <h1>✌️ Hey, I'm Josh.</h1>
-
-    <div className="grid grid--gutters" style={{marginTop: 50}}>
+    <div className="grid grid--gutters reverse-sm">
       <div className="grid-cell">
+        <h1>✌️ Hey, I'm Josh.</h1>
         <p>I program things for the web, virtual reality, the real world. <span className="text-blue" style={{fontWeight: 'bold'}}>JavaScript</span> is my jam, but I speak <a href="#tech">other languages</a> too.</p>
 
         <p><a href="https://github.com/8ctopotamus" target="_blank">Check out my github</a> to see some code.</p>
 
-        <p>When I am not coding, I am playing music or riding my bike.</p>
+        <p>Want to know more?</p>
 
-        <Link className="btn btn-blue" to="/projects/" style={{marginRight: 14}}>See projects</Link>
-        <Link className="btn btn-green" to="/contact/">Contact</Link>
-
-        <h3 style={{marginTop: 50}}>What I can do for you</h3>
-        <ul style={{columnCount: 2}}>
-          <li>WordPress themes</li>
-          <li>WordPress plugins</li>
-          <li>Static sites</li>
-          <li>(Progressive) web apps</li>
-          <li>React Native (Android/iOS)</li>
-          <li>Graphics</li>
-          <li>Email</li>
-          <li>Video editing</li>
-          <li>Animation</li>
-          <li>Mobile Games</li>
-          <li>Virtual Reality</li>
-          <li>3D Games</li>
-          <li>Music</li>
-        </ul>
+        <Link to="/projects/"
+              className="btn btn-blue"
+              style={{marginRight: 14, marginBottom: 14}}>
+              See projects
+        </Link>
+        <Link to="/contact/"
+              className="btn btn-green"
+              style={{marginBottom: 14}}>
+            Contact</Link>
       </div>
-      <div className="grid-cell" style={{maxWidth: '33%'}}>
+      <div className="grid-cell josh-melodica-cell">
         <div className="josh-melodica-wrap"></div>
       </div>
     </div>
 
     <hr/>
+
+    <h3 style={{marginTop: 50}}>What I can do for you</h3>
+    <ul style={{columnCount: 3}}>
+      <li>WordPress themes</li>
+      <li>WordPress plugins</li>
+      <li>Static sites</li>
+      <li>(Progressive) web apps</li>
+      <li>React Native (Android/iOS)</li>
+      <li>Graphics</li>
+      <li>Email</li>
+      <li>Video editing</li>
+      <li>Animation</li>
+      <li>Mobile Games</li>
+      <li>Virtual Reality</li>
+      <li>3D Games</li>
+      <li>Music</li>
+    </ul>
 
     <h2 className="sr-only">Technologies</h2>
     <div id="tech" className="about-icons">

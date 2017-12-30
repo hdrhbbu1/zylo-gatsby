@@ -38,7 +38,11 @@ class NavBar extends React.Component {
 
   render() {
     const { menuToggled } = this.state
-    const isHome = window.location.pathname === '/' ? true : false
+
+    let isHome
+    if (typeof window !== 'undefined') {
+      isHome = window.location.pathname === '/' ? true : false
+    }
 
     return (
       <nav className="main-navigation">

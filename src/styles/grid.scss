@@ -143,65 +143,65 @@
   padding: 2em 0 0 2em;
 }
 
-@media (--break-sm) {
-  .small-grid--gutters {
-    margin: -1em 0 1em -1em;
+/* Base classes for all media */
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+.Grid--1of2 > .Grid-cell {
+  flex: 0 0 50%
+}
+.Grid--1of3 > .Grid-cell {
+  flex: 0 0 33.3333%
+}
+.Grid--1of4 > .Grid-cell {
+  flex: 0 0 25%
+}
+
+/* Small to medium screens */
+@media (min-width: 24em) {
+  .grid {
+    flex-direction: column;
   }
-  .small-grid--gutters > .grid-cell {
-    padding: 1em 0 0 1em;
+
+  .small-Grid--fit > .Grid-cell {
+    flex: 1;
   }
-  .small-grid--guttersLg {
-    margin: -1.5em 0 1.5em -1.5em;
+  .small-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
   }
-  .small-grid--guttersLg > .grid-cell {
-    padding: 1.5em 0 0 1.5em;
+  .small-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
   }
-  .small-grid--guttersXl {
-    margin: -2em 0 2em -2em;
+  .small-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
   }
-  .small-grid--guttersXl > .grid-cell {
-    padding: 2em 0 0 2em;
+  .small-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
   }
 }
 
-@media (--break-md) {
-  .med-grid--gutters {
-    margin: -1em 0 1em -1em;
+/* Large screens */
+@media (min-width: 48em) {
+  .grid {
+    flex-direction: row;
   }
-  .med-grid--gutters > .grid-cell {
-    padding: 1em 0 0 1em;
-  }
-  .med-grid--guttersLg {
-    margin: -1.5em 0 1.5em -1.5em;
-  }
-  .med-grid--guttersLg > .grid-cell {
-    padding: 1.5em 0 0 1.5em;
-  }
-  .med-grid--guttersXl {
-    margin: -2em 0 2em -2em;
-  }
-  .med-grid--guttersXl > .grid-cell {
-    padding: 2em 0 0 2em;
-  }
-}
 
-@media (--break-lg) {
-  .large-grid--gutters {
-    margin: -1em 0 1em -1em;
+  .large-Grid--fit > .Grid-cell {
+    flex: 1;
   }
-  .large-grid--gutters > .grid-cell {
-    padding: 1em 0 0 1em;
+  .large-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
   }
-  .large-grid--guttersLg {
-    margin: -1.5em 0 1.5em -1.5em;
+  .large-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
   }
-  .large-grid--guttersLg > .grid-cell {
-    padding: 1.5em 0 0 1.5em;
+  .large-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
   }
-  .large-grid--guttersXl {
-    margin: -2em 0 2em -2em;
-  }
-  .large-grid--guttersXl > .grid-cell {
-    padding: 2em 0 0 2em;
+  .large-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
   }
 }
