@@ -17,11 +17,10 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          "gatsby-remark-copy-linked-files",
           {
             resolve: `gatsby-remark-images`,
             options: {
-              linkImagesToOriginal: true,
+              linkImagesToOriginal: false,
               maxWidth: 590,
             },
           }

@@ -16,28 +16,35 @@ const ProjectsPage = ({data}) => {
   }
 
   return (
-    <div>
+    <div className="projects-page">
       <h1 style={{display: 'none'}}>Projects</h1>
 
       {
         posts.map((post, i) => {
-          console.log('Post: ', post.node)
+          // console.log('Post: ', post.node)
           return (
             <div className="post-preview" key={i}>
-              <div className="post-image" style={{backgroundImage: `url(${post.node.frontmatter.featuredImage.childImageSharp.sizes.src})`}} />
-
-
               <div className="post-details">
+
+                <Link to={post.node.frontmatter.path}
+                  className="btn btn-green"
+                  style={{
+                    float: 'right'
+                  }}>
+                  View
+                </Link>
+
                 <Link to={post.node.frontmatter.path}>
                   <h3>{post.node.frontmatter.title}</h3>
                 </Link>
 
                 { renderPostTags(post.node.frontmatter.tags) }
-
-                <p>{ post.node.frontmatter.excerpt }</p>
-                <Link className="btn btn-green" to={post.node.frontmatter.path}>View</Link>
-
               </div>
+
+              <Link to={post.node.frontmatter.path}>
+                <Img sizes={post.node.frontmatter.featuredImage.childImageSharp.sizes} />
+              </Link>
+
             </div>
         )})
       }
@@ -49,7 +56,7 @@ export default ProjectsPage
 
 export const ProjectsQuery = graphql`
   query ProjectsQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: ASC}) {
       edges {
         node {
           excerpt

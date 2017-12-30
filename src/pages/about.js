@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import Me from '../images/me.jpg'
+import Me from '../images/me.png'
 
 // icons
 import ReactIcon from '../images/about-icons/react.png'
@@ -24,23 +24,28 @@ import AdobePremierePrologo from '../images/about-icons/premiere-cc.svg'
 import AffinityDesignerlogo from '../images/about-icons/affinity-designer.png'
 import AffinityPhotologo from '../images/about-icons/affinity-photo.png'
 import RaspberryPilogo from '../images/about-icons/raspberry-pi-logo.png'
+import ArduinoLogo from '../images/about-icons/arduino-logo.png'
+import FirebaseLogo from '../images/about-icons/firebase.png'
+import VueLogo from '../images/about-icons/Vue.js_Logo.svg'
+import GatsbyLogo from '../images/about-icons/gatsby.svg'
+import MongoDBLogo from '../images/about-icons/mongodb-logo.jpg'
+import ExpressLogo from '../images/about-icons/express.png'
+import HTMLCSSIcon from '../images/about-icons/html-css-logos.png'
 
 const AboutPage = () => (
-  <div>
-    <div className="grid grid--gutters grid--center ">
-      <div className="grid-cell">
-        <h1>Hey, I'm Josh.</h1>
-      </div>
-      <div>
-        <Link className="btn btn-green btn-block" to="/contact/">Contact</Link>
-      </div>
-    </div>
+  <div className="about-page">
+    <h1>✌️ Hey, I'm Josh.</h1>
 
     <div className="grid grid--gutters" style={{marginTop: 50}}>
       <div className="grid-cell">
-        <p>I like to make creative things for the web, virtual reality, the real world, and your ears! I like programming in <span className="text-blue">JavaScript</span> and <span className="text-blue">PHP</span>.</p>
+        <p>I program things for the web, virtual reality, the real world. <span className="text-blue" style={{fontWeight: 'bold'}}>JavaScript</span> is my jam, but I speak <a href="#tech">other languages</a> too.</p>
 
-        <Link className="btn btn-blue btn-block" to="/projects/">See projects</Link>
+        <p><a href="https://github.com/8ctopotamus" target="_blank">Check out my github</a> to see some code.</p>
+
+        <p>When I am not coding, I am playing music or riding my bike.</p>
+
+        <Link className="btn btn-blue" to="/projects/" style={{marginRight: 14}}>See projects</Link>
+        <Link className="btn btn-green" to="/contact/">Contact</Link>
 
         <h3 style={{marginTop: 50}}>What I can do for you</h3>
         <ul style={{columnCount: 2}}>
@@ -60,14 +65,14 @@ const AboutPage = () => (
         </ul>
       </div>
       <div className="grid-cell" style={{maxWidth: '33%'}}>
-        <img src={Me} alt="Josh" />
+        <div className="josh-melodica-wrap"></div>
       </div>
     </div>
 
     <hr/>
 
-    <h2>Technologies</h2>
-    <div className="about-icons">
+    <h2 className="sr-only">Technologies</h2>
+    <div id="tech" className="about-icons">
       <a href="https://facebook.github.io/react/" target="_blank" title="React">
         <img src={ReactIcon} alt="React logo" />
         <span>React</span>
@@ -76,11 +81,15 @@ const AboutPage = () => (
         <img src={ReactNativeIcon} alt="React Native logo" />
         <span>React Native</span>
       </a>
+      <a href="https://vuejs.org/" target="_blank" title="Vue">
+        <img src={VueLogo} alt="Vue logo" />
+        <span>Vue</span>
+      </a>
       <a href="https://wordpress.org/" target="_blank" title="WordPress">
         <img className="white-bkgd" src={WPIcon} alt="WordPress logo" />
-        <span>WordPress, Custom WP themes + plugins</span>
+        <span>WordPress</span>
       </a>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="Javascript">
+      <a href="https://nodejs.org/en/" target="_blank" title="Javascript">
         <img className="white-bkgd" src={NodeIcon} alt="NodeJS logo" />
         <span>NodeJS</span>
       </a>
@@ -96,9 +105,13 @@ const AboutPage = () => (
         <img src={JavascriptIcon} alt="Javascript logo" />
         <span>JavaScript</span>
       </a>
-      <a href="https://phenomic.io/" target="_blank" title="Phenomic">
-        <img className="white-bkgd" src={Phenomiclogo} alt="Phenomic logo" />
-        <span>Phenomic</span>
+      <a href="https://www.w3schools.com/" target="_blank" title="HTML/CSS">
+        <img src={HTMLCSSIcon} alt="HTML/CSS logo" />
+        <span>HTML/CSS</span>
+      </a>
+      <a href="https://www.gatsbyjs.org/" target="_blank" title="Gatsby">
+        <img className="white-bkgd" src={GatsbyLogo} alt="Gatsby logo" />
+        <span>Gatsby</span>
       </a>
       <a href="https://jekyllrb.com/" target="_blank" title="Jekyll">
         <img src={Jekylllogo} alt="Jekyll logo" />
@@ -111,6 +124,14 @@ const AboutPage = () => (
       <a href="https://unity3d.com/" target="_blank" title="Unity">
         <img className="white-bkgd" src={Unitylogo} alt="Unity logo" />
         <span>Unity</span>
+      </a>
+      <a href="https://www.mongodb.com/" target="_blank" title="Express">
+        <img className="white-bkgd" src={ExpressLogo} alt="Express logo" />
+        <span>Express</span>
+      </a>
+      <a href="https://www.mongodb.com/" target="_blank" title="MongoDB">
+        <img className="white-bkgd" src={MongoDBLogo} alt="Mongo DB logo" />
+        <span>MongoDB</span>
       </a>
       <a href="https://www.adobe.com/products/illustrator.html" target="_blank" title="Adobe Illustrator">
         <img src={AdobeIllustratorlogo} alt="Adobe Illustrator logo" />
@@ -144,8 +165,11 @@ const AboutPage = () => (
         <img src={RaspberryPilogo} alt="Raspberry Pi logo" />
         <span>Raspberry Pi</span>
       </a>
+      <a href="https://www.arduino.cc/" target="_blank" title="Arduino">
+        <img src={ArduinoLogo} alt="Arduino logo" />
+        <span>Arduino</span>
+      </a>
     </div>
-
   </div>
 )
 

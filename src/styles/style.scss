@@ -25,15 +25,6 @@ body {
   color: $white;
   padding: 1em;
   min-height: 100vh;
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b0055+0,9b0077+100 */
-  // background: #0b0055;
-  // background: -moz-linear-gradient(top,  #0b0055 0%, #9b0077 100%);
-  // background: -webkit-linear-gradient(top,  #0b0055 0%,#9b0077 100%);
-  // background: linear-gradient(to bottom,  #0b0055 0%,#9b0077 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0055', endColorstr='#9b0077',GradientType=0
-  // );
-  background-repeat: no-repeat;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#510094+0,0b0055+100 */
   background: #510094; /* Old browsers */
   background: -moz-linear-gradient(top right, #510094 0%, #0b0055 100%); /* FF3.6-15 */
@@ -51,11 +42,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
 }
 
-a {color: $green;}
-
 h1 {
-  font-size: 4.8rem;
-  line-height: 3rem;
+  font-size: 4.2rem;
+  line-height: 4.8rem;
+  border-bottom: 3px dotted $green;
 }
 h2 {
   font-size: 3.3rem;
@@ -64,10 +54,54 @@ h3 {
   font-size: 2.5rem;
   line-height:2rem;
 }
+
 p {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   line-height: 2.3rem;
+  font-weight: 300;
+}
+
+hr {
+  border-top: 3px dotted $blue;
+  background: transparent;
+}
+
+.sr-only {display: none;}
+
+
+.josh-melodica-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 278px;
+  height: 100%;
+  max-height: 500px;
+  background: $blue;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+  background-image: url(../images/me.png);
+  background-blend-mode: difference;
+
+  &::after {
+    opacity: .75;
+    position: absolute;
+    bottom: -10px;
+    left: -14px;
+    content:'';
+    display: block;
+    width: 100%;
+    max-width: 278px;
+    height: 100%;
+    max-height: 500px;
+    background: $yellow;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-image: url(../images/me.png);
+    background-blend-mode: darken;
+  }
 }
 
 .up-arrow {
@@ -78,54 +112,6 @@ p {
   transition: all ease-in-out .3s;
 
   &:hover { opacity: .85;}
-}
-
-.btn {
-  padding: 0.5em 1.2em;
-  border: 3px solid #fff;
-  text-decoration: none;
-  background: rgba(251, 252, 252, 0.1);
-  text-align: center;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.btn-green {
-  border-color: $green;
-  color: $green;
-}
-
-.btn-blue {
-  border-color: $blue;
-  color: $blue;
-}
-
-.btn-red {
-  border-color: $red;
-  color: $red;
-}
-
-.btn-yellow {
-  border-color: $yellow;
-  color: $yellow;
-}
-
-.btn-white {
-  border-color: $white;
-  color: $white;
-}
-
-
-/*
-  Backgrounds
-*/
-
-
-.text-blue {
-  color: $blue;
 }
 
 /*
@@ -176,10 +162,11 @@ a.logo {
   animation: fadein 400ms linear;
 
   a {
+    display: block;
     color: $white;
     margin-left: 5%;
     transition: all ease-in-out .3s;
-    animation: fadeinup 300ms linear 200ms;
+    animation: fadeinup 300ms linear;
   }
 
   &.open {
@@ -287,13 +274,14 @@ a.logo {
 */
 .content {
   margin: 0 auto;
-  // max-width: 960px;
-  // padding: 2.9rem 1.0875rem 1.45rem;
   padding: 2.5% 10%;
 
-  a {
+  a:not(.btn) {
     position: relative;
-    color: inherit;
+    color: $green;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 2px dotted $green;
+
     text-decoration: none;
     line-height: 24px;
     &:before, &:after {
@@ -303,6 +291,86 @@ a.logo {
     }
   }
 }
+
+[class$="-page"],
+.post {
+  animation: fadeinupsmall 300ms linear;
+}
+
+
+/*
+  Buttons
+*/
+
+.btn {
+  background: rgba(251, 252, 252, 0.1);
+  border-color: #fff;
+  border-radius: 2px;
+  border-style: solid !important;
+  border-width: 3px !important;
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  text-align: center;
+  transition: all ease-in-out .3s;
+
+  &:hover {
+    color: $darkBlue;
+    border-color: $white;
+    transform: scale(1.1);
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-green {
+  border-color: $green;
+  color: $green;
+  &:hover {
+    background: $green;
+  }
+}
+
+.btn-blue {
+  border-color: $blue;
+  color: $blue;
+  &:hover {
+    background: $blue;
+  }
+}
+
+.btn-red {
+  border-color: $red;
+  color: $red;
+  &:hover {
+    background: $red;
+  }
+}
+
+.btn-yellow {
+  border-color: $yellow;
+  color: $yellow;
+  &:hover {
+    background: $yellow;
+  }
+}
+
+.btn-white {
+  border-color: $white;
+  color: $white;
+  &:hover {
+    background: $white;
+  }
+}
+
+.text-blue {
+  color: $blue;
+}
+
+
 
 /*
   Contact form styles
@@ -332,8 +400,9 @@ a.logo {
   }
 
   input[type="submit"] {
-    padding: 0 1rem;
+    padding: 1.2rem;
     text-align: center;
+    font-size: 2em;
     border-radius: 3px;
     transition: .2s all;
     color: $green;
@@ -346,7 +415,6 @@ a.logo {
     opacity: .7;
   }
 }
-
 
 
 /*
@@ -363,6 +431,10 @@ a.logo {
   width: 20%;
   margin: 0 2.5% 20px;
   text-align: center;
+
+  &:hover {
+    img {transform: scale(1.1);}
+  }
 }
 
 .about-icons span {color: #fff;}
@@ -390,21 +462,21 @@ a.logo {
   PostPreview
 */
 .post-preview {
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5rem;
 
-}
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b0055+0,510094+100 */
+background: #0b0055; /* Old browsers */
+background: -moz-linear-gradient(45deg, #0b0055 0%, #510094 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #0b0055 0%,#510094 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #0b0055 0%,#510094 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0055', endColorstr='#510094',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-.post-details {
-  padding: 2.9rem 1.0875rem 1.45rem;
-}
-
-.post-image {
-  background: black;
-  display: block;
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+   .post-details {
+     background: #36007c;
+     padding: 2.9rem 1.0875rem 1.45rem;
+     z-index: 100;
+   }
 }
 
 ul.post-preview_tags {
@@ -421,6 +493,17 @@ ul.post-preview_tags {
     font-size: .6em;
   }
 }
+
+/*
+  Single post
+*/
+.post {
+   .gatsby-resp-image-wrapper,
+   .gatsby-image-outer-wrapper {
+     margin-bottom: 50px;
+   }
+}
+
 
 @media (max-width: 50em) {
   .mobile-collapse {
